@@ -1,0 +1,38 @@
+{
+  "realm" : "buckfiddy",
+  "users" : [ {
+    "id" : "f3f70de0-c6db-4885-a568-987aaa7ebf62",
+    "username" : "service-account-headscale",
+    "emailVerified" : false,
+    "createdTimestamp" : 1720335340546,
+    "enabled" : true,
+    "totp" : false,
+    "serviceAccountClientId" : "headscale",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-buckfiddy" ],
+    "clientRoles" : {
+      "headscale" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "35aa0f6f-5731-46c4-a58e-f7223ca7afe4",
+    "username" : "service-account-headscale-webui",
+    "emailVerified" : false,
+    "createdTimestamp" : 1720335517716,
+    "enabled" : true,
+    "totp" : false,
+    "serviceAccountClientId" : "headscale-webui",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-buckfiddy" ],
+    "clientRoles" : {
+      "headscale-webui" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

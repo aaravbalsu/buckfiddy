@@ -1,0 +1,12 @@
+# If you plan to somehow use headscale, please deploy your own DERP infra: https://tailscale.com/kb/1118/custom-derp-servers/
+regions:
+  956:
+    regionid: 150
+    regioncode: buk
+    regionname: Buckfiddy Headscale
+    nodes:
+      - name: 150m
+        regionid: 150
+        hostname: mellon.westus2.cloudapp.azure.com
+        stunport: 15078
+        derpport: 15043

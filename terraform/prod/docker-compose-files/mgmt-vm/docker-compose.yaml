@@ -1,0 +1,239 @@
+# mgmt-vm docker-compose content
+
+#
+# Docker networks for containers to access internal ports.
+# Remember to run create networks before running containers
+# e.g. `docker network create keycloak`
+#
+networks:
+  # Keycloak to Postgresql network for isolated communications
+  kc-net:
+    external: true
+  # Default docker network for external communications through Nginx
+  150mgt-net:
+    external: true
+
+
+services:
+  #
+  # Nginx Proxy Manager container
+  #
+  nginx:
+    image: 'jc21/nginx-proxy-manager:2.10.4'
+    #TODO: image: '<b50-private-register>/nginx-mgt:latest'
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    # Uncomment for initial setup of Nginx
+    #  - "15081:81"
+    volumes:
+      - ./nginx/data:/data
+      - ./nginx/letsencrypt:/etc/letsencrypt
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx/data/vhost.d:/etc/nginx/vhost.d:ro
+    environment:
+      - DISABLE_IPV6=true
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - 150mgt-net  
+  #
+  # Keycloak open-source authentication platform to support access to OIDC 
+  # enabled apps.
+  # Usefule guides to the many...many config issues:
+  # - v2 Upgrade guide: https://www.keycloak.org/docs/latest/upgrading/index.html
+  # - ALL Keycloak env variable: https://www.keycloak.org/server/all-config
+  # - TLS Headers: https://www.keycloak.org/server/hostname
+  # - More on headers...: https://skycloak.io/how-to-run-keycloak-behind-a-reverse-proxy/
+  #
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0.0
+    #TODO: image: '<b50-private-register>/keycloak:latest'
+    container_name: keycloak
+    ### Use to backup good configs!!! This folder doesn't throw permission errors...
+    #command: export --dir /tmp/exports      
+    ### Imports a good config from backup in ./keycloak/exports folder
+    #command: import --dir /tmp/exports
+    #command: build --db=postgres
+    command: start # --optimized # TODO: Resolve JDBC driver issue to allow optomized mode
+    restart: always
+    #restart: unless-stopped # Run when using command: export ...
+    volumes:
+      - ./keycloak/exports:/tmp/exports # Holds backup files from export runs...
+    ports:
+      # Auth service port
+      - "8080:8080"
+      # Internal management port?
+      - "9000:9000"
+    environment:
+      - KC_LOG_LEVEL=info
+      ### Troubleshooting...
+      #- KC_HEALTH_ENABLED=true 
+      #- KC_HOSTNAME_DEBUG=true # Enables the hostname debug paths for troubleshooting
+      #- KC_HTTP_MANAGEMENT_PORT=9000
+        ###
+      ### Keycloak behind a reverse proxy settings
+      # Disables dynamically resolving the hostname from request headers.
+      # Should always be set to true in production, unless your reverse proxy overwrites the Host header. 
+      # If enabled, the hostname option needs to be specified.
+      - KC_HOSTNAME_STRICT=false
+      # Scheme, port and context path are resolved dynamically from X-Forwarded-* headers, 
+      # while hostname is statically defined as my.keycloak.org.
+      - KC_PROXY_HEADERS=xforwarded # Fyi... 'forwarded' option doesn't play well w/ Nginx
+      # Provides an Edge TLS termination instance equivalent to --proxy=edge
+      - KC_HTTP_RELATIVE_PATH=/auth
+      - KC_HTTP_ENABLED=true
+      # Set hostname w/ FULL url when using Edge proxy settings above
+      - KC_HOSTNAME=https://buckfiddy.westus2.cloudapp.azure.com/auth
+      # Internal address for accessing the administration console.
+      #- KC_HTTP_MANAGEMENT_RELATIVE_PATH= ### Comment this back out if breaking
+      - KC_HOSTNAME_ADMIN=http://l33t.buckfiddy/auth
+      #
+      # Allow Keycloak to pass X Headers so VPN devices aren't created as 'localhost'
+      - PROXY_ADDRESS_FORWARDING=true
+      # Enables dynamic resolving of backchannel URLs, including hostname, scheme, port and context path.
+      - KC_HOSTNAME_BACKCHANNEL_DYNAMIC=true
+        ###
+      ### KC DB settings
+      - KC_DB=postgres
+      - KC_DB_USERNAME=${POSTGRES_USER}
+      - KC_DB_PASSWORD=${POSTGRES_PASSWORD}
+      # URL variable format has...particular needs
+      # https://stackoverflow.com/questions/71474671/no-suitable-jdbc-driver-when-attempting-to-connect-to-docker-postgres-db
+      - KC_DB_URL_HOST=postgres
+      # 100% Eff these jdbc errors...wtf
+      #- KC_DB_URL=jdbc:postgresql://postgres/${POSTGRES_DB}
+      - KC_DB_URL_DATABASE=${POSTGRES_DB}
+        ###
+      ### KC admin user secrets from .env file
+      - KEYCLOAK_ADMIN=${KC_USER}
+      - KEYCLOAK_ADMIN_PASSWORD=${KC_PASSWORD}
+        ###
+    security_opt:
+      - no-new-privileges:true
+      - label:disable # Helps make fingerprinting harder
+    depends_on:
+      - postgres
+    networks:
+      - kc-net
+      - 150mgt-net
+  #
+  # Headscale server container
+  # 
+  headscale:
+    # Use release 0.22.3 cuz 'latest' breaks containers w/ new container-not-frields config.yaml file
+    image: 'headscale/headscale:0.22.3'     
+    #TODO: image: '<b50-private-register>/headscale:latest'
+    container_name: headscale
+    command: headscale serve
+    restart: unless-stopped
+    ports:
+      - "8150:8080"
+    #  - "9150:9090"
+    environment:
+      - OIDC_REDIRECT_URI=https://key.buckfiddy/oidc/callback
+    volumes:
+      - ./headscale/config:/etc/headscale
+      - ./headscale/data:/var/lib/headscale
+    depends_on:
+      - keycloak
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - 150mgt-net
+  #
+  # Headscale-webui container
+  #
+  headscale-webui:
+    image: 'ghcr.io/ifargle/headscale-webui:latest'
+    #TODO: image: '<b50-private-register>/headscale-webui:latest'
+    container_name: headscale-webui
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      # IMPORTANT: Make sure ./volume is readable by UID 1000 (chown 1000:1000 ./volume)
+      - ./headscale/ui/volume:/data 
+      # Used to read your config from 'headscale' container.
+      - ./headscale/config:/etc/headscale:ro 
+    environment:
+      ### Troubleshooting
+      - LOG_LEVEL=info
+        ###
+      ### Necessary settings
+      - TZ=America/Los_Angeles
+      - PGID=1000
+      - PUID=1000
+      # Set this to your preferred color scheme. See the MaterializeCSS docs for examples. 
+      # Only set the "base" color -- ie, instead of blue-gray darken-1, just use blue-gray.
+      - COLOR=red
+      - HS_SERVER=https://buckfiddy.westus2.cloudapp.azure.com
+      - DOMAIN_NAME=https://buckfiddy.westus2.cloudapp.azure.com
+      # Set this to the path you want pre-pended to secure any request, like a GUID you monster...
+      - SCRIPT_NAME= # E.g. - SCRIPT_NAME=/ASLDKFJLJ-ALSJFLAJ-ALDFJLKJFLKJ-QWERWQER
+      - KEY=${HSUI_KEY}
+        ###
+      ### OIDC settings
+      - AUTH_TYPE=OIDC # Remove or change to 'basic' to access service w/o SSO
+      - OIDC_SCOPE=openid
+      - OIDC_RESPONSE_TYPE=code
+      - OIDC_REDIRECT_URI=https://tails.buckfiddy/oidc_callback
+        ###
+      ### Some of these may not be necessary according to internet wisdom... bsts
+      - OIDC_AUTH_URL=http://key.buckfiddy/auth/realms/buck50/.well-known/openid-configuration 
+      - OIDC_ISSUER=http://key.buckfiddy/auth/realms/buck50
+      - OIDC_CLIENT_ID=headscale-webui
+      - OIDC_CLIENT_SECRET=${KC_HSUI_CLIENT_SECRET}
+        ###
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - 150mgt-net
+  ###
+  # Note: The containers below do not require any custom configuration and therefore
+  # are optional for adding to a private docker registry.
+  ###
+  # Postgres DB to support Keycloak service
+  #
+  postgres:
+    # Release 16 is compatible with Keycloak for 'optimized' starts
+    image: postgres:16 
+    container_name: postgres
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - ./keycloak/data:/var/lib/postgresql/data
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - kc-net
+  #
+  # Headscale DERP server container
+  #
+  derper:
+    image: 'ghcr.io/slchris/derp-server:v1'
+    container_name: derper
+    depends_on:
+      - keycloak
+    # Disable once Nginx 'Streams' hosts are added to direct traffic to docker network
+    ports:
+      - "15078:3478/udp"
+      - "15043:443"
+    # Make sure the 'npm' folder matches where the websites (e.g. buckfiddy.westus2...) 
+    # active SSL certificates are located on your host machine.
+    volumes:
+      - ./nginx/letsencrypt/live/npm-2/fullchain.pem:/app/certs/buckfiddy.westus2.cloudapp.azure.com.crt
+      - ./nginx/letsencrypt/live/npm-2/privkey.pem:/app/certs/buckfiddy.westus2.cloudapp.azure.com.key
+    environment:
+      - DERP_CERT_MODE=manual
+      - DERP_DOMAIN=buckfiddy.westus2.cloudapp.azure.com
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+            - 150mgt-net

@@ -1,0 +1,924 @@
+{
+    "schemaVersion": 2,
+    "configProperties": {
+        "name": "New Member Board"
+    },
+    "categories": [
+        {
+            "id": "8c7c0bd0-36cc-4e0c-bcbd-302766e2ee1c",
+            "name": "Operations",
+            "position": 1,
+            "type": "category"
+        }
+    ],
+    "wrappers": [
+        {
+            "id": "default",
+            "position": 0
+        },
+        {
+            "id": "60e18347-35e3-473c-9dbe-62faed207a61",
+            "position": 1
+        },
+        {
+            "id": "e176669a-1334-4fdf-b4f9-0f9d4bff7843",
+            "position": 2
+        }
+    ],
+    "apps": [
+        {
+            "id": "47af36c0-47c1-4e5b-bfc7-ad645ee6a337",
+            "name": "Discord",
+            "url": "https://discord.com/invite/aCsmEV5RgA",
+            "behaviour": {
+                "onClickUrl": "https://discord.com/invite/aCsmEV5RgA",
+                "isOpeningNewTab": true,
+                "externalUrl": "https://discord.com/invite/aCsmEV5RgA",
+                "tooltipDescription": "Join our Discord server! We're waiting for your ideas and feedback. "
+            },
+            "network": {
+                "enabledStatusChecker": false,
+                "statusCodes": [
+                    "200"
+                ]
+            },
+            "appearance": {
+                "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/discord.png",
+                "appNameStatus": "normal",
+                "positionAppName": "column",
+                "lineClampAppName": 1,
+                "appNameFontSize": 16
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "right"
+                }
+            },
+            "shape": {
+                "md": {
+                    "location": {
+                        "x": 1,
+                        "y": 2
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "sm": {
+                    "location": {
+                        "x": 1,
+                        "y": 4
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 4
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            }
+        },
+        {
+            "id": "95284697-d293-48f2-a54e-645e6ad2173d",
+            "name": "Ghostwriter",
+            "url": "https://report.buckfiddy",
+            "appearance": {
+                "iconUrl": "https://github.com/GhostManager/Ghostwriter/raw/master/DOCS/images/logo.png",
+                "appNameStatus": "normal",
+                "positionAppName": "column",
+                "lineClampAppName": 1,
+                "appNameFontSize": 18
+            },
+            "network": {
+                "enabledStatusChecker": true,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "https://report.buckfiddy",
+                "tooltipDescription": "Manage clients, projects, reports, and infrastructure."
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "right"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 5
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 2
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        },
+        {
+            "id": "915ed854-48de-4257-ae6f-65ed4d946e3a",
+            "name": "Headscale Admin",
+            "url": "https://tails.buckfiddy",
+            "appearance": {
+                "iconUrl": "https://developer.asustor.com/uploadIcons/0020_999_1673598004_tailscale_native_icon_256.png",
+                "appNameStatus": "normal",
+                "positionAppName": "column-reverse",
+                "lineClampAppName": 1,
+                "appNameFontSize": 18
+            },
+            "network": {
+                "enabledStatusChecker": true,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "https://tails.buckfiddy"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "left"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 5
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 3
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        },
+        {
+            "id": "5df743d9-5cb1-457c-85d2-64ff86855652",
+            "name": "Documentation",
+            "url": "https://homarr.dev",
+            "behaviour": {
+                "onClickUrl": "https://homarr.dev",
+                "externalUrl": "https://homarr.dev",
+                "isOpeningNewTab": true
+            },
+            "network": {
+                "enabledStatusChecker": false,
+                "statusCodes": [
+                    "200"
+                ]
+            },
+            "appearance": {
+                "iconUrl": "/imgs/logo/logo.png",
+                "appNameStatus": "normal",
+                "positionAppName": "column",
+                "lineClampAppName": 1,
+                "appNameFontSize": 16
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "right"
+                }
+            },
+            "shape": {
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 3
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "sm": {
+                    "location": {
+                        "x": 0,
+                        "y": 1
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 2
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 2
+                    }
+                }
+            }
+        },
+        {
+            "id": "b34eca10-7564-442a-8668-cd31a8f36b67",
+            "name": "Nginx NPM",
+            "url": "https://proxy.buckfiddy",
+            "appearance": {
+                "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/nginx-proxy-manager.svg",
+                "appNameStatus": "normal",
+                "positionAppName": "column-reverse",
+                "lineClampAppName": 1,
+                "appNameFontSize": 18
+            },
+            "network": {
+                "enabledStatusChecker": true,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "https://proxy.buckfiddy"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "left"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 4
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 4
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        },
+        {
+            "id": "6ffa4378-307a-421a-a84c-49d564959f2a",
+            "name": "Gitea",
+            "url": "http://git.buckfiddy",
+            "appearance": {
+                "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/gitea.svg",
+                "appNameStatus": "normal",
+                "positionAppName": "column",
+                "lineClampAppName": 1,
+                "appNameFontSize": 16
+            },
+            "network": {
+                "enabledStatusChecker": true,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "http://git.buckfiddy"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "right"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 2
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        },
+        {
+            "id": "a5499dab-3912-4ac5-b1ae-8ccae4b8fb9f",
+            "name": "User Portal",
+            "url": "https://buckfiddy.westus2.cloudapp.azure.com/auth/realms/buck50/account",
+            "appearance": {
+                "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/keycloak.png",
+                "appNameStatus": "normal",
+                "positionAppName": "column",
+                "lineClampAppName": 1,
+                "appNameFontSize": 16
+            },
+            "network": {
+                "enabledStatusChecker": true,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "http://l33t.buckfiddy/auth/realms/buck50/account/"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "right"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 6
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        },
+        {
+            "id": "bf70df91-77a9-43d3-aff2-9bf12ce25bf1",
+            "name": "Admin Portal",
+            "url": "http://l33t.buckfiddy",
+            "appearance": {
+                "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/keycloak.svg",
+                "appNameStatus": "normal",
+                "positionAppName": "column-reverse",
+                "lineClampAppName": 1,
+                "appNameFontSize": 16
+            },
+            "network": {
+                "enabledStatusChecker": false,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "http://l33t.buckfiddy/auth/admin"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "left"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 3
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 5
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        },
+        {
+            "id": "a1bd7c28-3be5-48ff-be82-0446902fc263",
+            "name": "Portainer",
+            "url": "https://deploy.buckfiddy",
+            "appearance": {
+                "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/portainer.svg",
+                "appNameStatus": "normal",
+                "positionAppName": "column",
+                "lineClampAppName": 1,
+                "appNameFontSize": 16
+            },
+            "network": {
+                "enabledStatusChecker": true,
+                "statusCodes": [
+                    "200",
+                    "301",
+                    "302",
+                    "304",
+                    "307",
+                    "308"
+                ]
+            },
+            "behaviour": {
+                "isOpeningNewTab": true,
+                "externalUrl": "https://deploy.buckfiddy"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "right"
+                }
+            },
+            "shape": {
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 3
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 1
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                }
+            },
+            "integration": {
+                "type": null,
+                "properties": []
+            }
+        }
+    ],
+    "widgets": [
+        {
+            "id": "e3004052-6b83-480e-b458-56e8ccdca5f0",
+            "type": "weather",
+            "properties": {
+                "displayInFahrenheit": false,
+                "location": {
+                    "name": "Paris",
+                    "latitude": 48.85341,
+                    "longitude": 2.3488
+                },
+                "displayCityName": true
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "left"
+                }
+            },
+            "shape": {
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "sm": {
+                    "location": {
+                        "x": 2,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 2
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            }
+        },
+        {
+            "id": "971aa859-8570-49a1-8d34-dd5c7b3638d1",
+            "type": "date",
+            "properties": {
+                "display24HourFormat": true,
+                "dateFormat": "hide",
+                "enableTimezone": false,
+                "timezoneLocation": {
+                    "name": "Paris",
+                    "latitude": 48.85341,
+                    "longitude": 2.3488
+                },
+                "titleState": "city",
+                "timezone": "America/Los_Angeles",
+                "customTitle": "Issaquah, WA"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "left"
+                }
+            },
+            "shape": {
+                "sm": {
+                    "location": {
+                        "x": 1,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 1
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            }
+        },
+        {
+            "id": "f252768d-9e69-491b-b6b4-8cad04fa30e8",
+            "type": "date",
+            "properties": {
+                "display24HourFormat": true,
+                "dateFormat": "hide",
+                "enableTimezone": true,
+                "timezoneLocation": {
+                    "name": "Tokyo",
+                    "latitude": 35.6895,
+                    "longitude": 139.69171
+                },
+                "titleState": "city",
+                "timezone": "America/Chicago",
+                "customTitle": "Dallas, TX"
+            },
+            "area": {
+                "type": "sidebar",
+                "properties": {
+                    "location": "left"
+                }
+            },
+            "shape": {
+                "sm": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 2
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 1
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                }
+            }
+        },
+        {
+            "id": "86b1921f-efa7-410f-92dd-79553bf3264d",
+            "type": "notebook",
+            "properties": {
+                "showToolbar": true,
+                "content": "<h2><strong>[̲̅$̲̅(̲̅5̲̅)̲̅$̲̅]~&gt; Welcome Operator (▀̿Ĺ̯▀̿ ̿) 🚀👋</strong></h2><p>We're glad that you're here! Homarr is a <em>modern </em>and <em>easy to use</em> dashboard that helps you to <strong>organize and manage</strong> your home network from one place. Control is <strong>at your fingertips</strong>.</p><p>We recommend you to read the <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://homarr.dev/docs/getting-started/after-the-installation\">getting started guide</a> first. To edit this board you must enter the edit mode - only administrators can do this. Adding an app is the first step you should take. You can do this by clicking the <code>Add tile</code> button at the top right and select <code>App</code>. After you provided an internal URL, external URL and selected an icon you can drag it around when holding down the left mouse button. Make it bigger or smaller using the drag icon at the bottom right. When you're happy with it's position, you <strong>must exit edit mode to save your board</strong>. Adding widgets works the same way but may require additional configuration - read the documentation for more information.</p><p>To remove this widget, you must log in to your administrator account and click on the menu to delete it.</p><p><strong><u>Your TODO list:</u></strong></p><ul data-type=\"taskList\"><li data-checked=\"false\" data-type=\"taskItem\"><label><input type=\"checkbox\"><span></span></label><div><p>Read the <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://homarr.dev\">documentation</a></p></div></li><li data-checked=\"false\" data-type=\"taskItem\"><label><input type=\"checkbox\"><span></span></label><div><p>Add your <em>first app</em></p></div></li><li data-checked=\"false\" data-type=\"taskItem\"><label><input type=\"checkbox\"><span></span></label><div><p><em>Resize </em>and <em>drag</em> your app to a different position</p></div></li><li data-checked=\"false\" data-type=\"taskItem\"><label><input type=\"checkbox\"><span></span></label><div><p>Add the <em>clock widget</em> to your dashboard</p></div></li><li data-checked=\"false\" data-type=\"taskItem\"><label><input type=\"checkbox\"><span></span></label><div><p>Create a <em>new user</em></p></div></li></ul>"
+            },
+            "area": {
+                "type": "wrapper",
+                "properties": {
+                    "id": "60e18347-35e3-473c-9dbe-62faed207a61"
+                }
+            },
+            "shape": {
+                "sm": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 3,
+                        "height": 2
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 3
+                    },
+                    "size": {
+                        "width": 6,
+                        "height": 2
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 10,
+                        "height": 3
+                    }
+                }
+            }
+        },
+        {
+            "id": "5283e447-365a-4e9a-bc81-cfd9d1ac9aa5",
+            "type": "iframe",
+            "properties": {
+                "embedUrl": "",
+                "allowFullScreen": true,
+                "allowScrolling": true,
+                "allowTransparency": false,
+                "allowPayment": false,
+                "allowAutoPlay": false,
+                "allowMicrophone": false,
+                "allowCamera": false,
+                "allowGeolocation": false
+            },
+            "area": {
+                "type": "category",
+                "properties": {
+                    "id": "8c7c0bd0-36cc-4e0c-bcbd-302766e2ee1c"
+                }
+            },
+            "shape": {
+                "sm": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 1,
+                        "height": 1
+                    }
+                }
+            }
+        },
+        {
+            "id": "c9a8ee66-a351-48f4-8e85-e40ecdfb7ed4",
+            "type": "notebook",
+            "properties": {
+                "showToolbar": true,
+                "allowReadOnlyCheck": true,
+                "content": "<p style=\"text-align: center\"></p><h2 style=\"text-align: center\"><strong>(▀̿Ĺ̯▀̿ ̿)'s</strong> notebook</h2><p>The <code>notebook</code> widget focuses on usability and is designed to be as simple as possible to bring a familiar editing experience to regular users, be it markdown or office type editors. It is based on <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://tiptap.dev/\">Tiptap.dev</a> and supports most of its features:</p><table><tbody><tr><td colspan=\"3\" rowspan=\"1\" style=\"background-color: rgba(95, 95, 95, 0.5)\"><h4 style=\"text-align: center\">General text formatting</h4></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p><strong>Bold</strong></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center\"><em>Italic</em></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: right\"><u>Underline</u></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p><s>Strike-through</s></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center\">Text alignment</p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: right\">Headings</p></td></tr></tbody></table><table><tbody><tr><td colspan=\"3\" rowspan=\"1\" style=\"background-color: rgba(95, 95, 95, 0.5)\"><h4 style=\"text-align: center\">Lists</h4></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><ol><li><p>Ordered</p></li></ol></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Bullet</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul data-type=\"taskList\"><li data-checked=\"true\" data-type=\"taskItem\"><label><input type=\"checkbox\" checked=\"checked\"><span></span></label><div><p>Check</p></div></li></ul></td></tr></tbody></table><table><tbody><tr><td colspan=\"3\" rowspan=\"1\" style=\"background-color: rgba(95, 95, 95, 0.5)\"><h4 style=\"text-align: center\">Coloring</h4></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p><span style=\"color: rgb(250, 82, 82)\">Text coloring</span></p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center\"><mark data-color=\"#FA5252\" style=\"background-color: #FA5252; color: inherit\">highlighting</mark></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: rgb(250, 82, 82)\"><p style=\"text-align: right\">Table cells</p></td></tr></tbody></table><table><tbody><tr><td colspan=\"3\" rowspan=\"1\" style=\"background-color: rgba(95, 95, 95, 0.5)\"><h4 style=\"text-align: center\">Inserts</h4></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Links</p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: center\">Images</p></td><td colspan=\"1\" rowspan=\"1\"><p style=\"text-align: right\">Tables</p></td></tr></tbody></table><hr><blockquote><h4>Widget options</h4><ul><li><p>Show the toolbar to help you write markdown:</p><p>The toolbar at the top that helps with controls, some not available in markdown.</p></li><li><p>Allow check in read only mode:</p><p>Check boxes usable outside of editing, also allows anonymous checks.</p></li></ul></blockquote>"
+            },
+            "area": {
+                "type": "wrapper",
+                "properties": {
+                    "id": "60e18347-35e3-473c-9dbe-62faed207a61"
+                }
+            },
+            "shape": {
+                "sm": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 2,
+                        "height": 1
+                    }
+                },
+                "md": {
+                    "location": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "width": 6,
+                        "height": 3
+                    }
+                },
+                "lg": {
+                    "location": {
+                        "x": 0,
+                        "y": 3
+                    },
+                    "size": {
+                        "width": 10,
+                        "height": 4
+                    }
+                }
+            }
+        }
+    ],
+    "settings": {
+        "common": {
+            "searchEngine": {
+                "type": "google",
+                "properties": {}
+            }
+        },
+        "customization": {
+            "layout": {
+                "enabledLeftSidebar": true,
+                "enabledRightSidebar": true,
+                "enabledDocker": false,
+                "enabledPing": true,
+                "enabledSearchbar": true
+            },
+            "pageTitle": "Team Buckfiddy",
+            "logoImageUrl": "/imgs/logo/logo.png",
+            "faviconUrl": "/imgs/favicon/favicon.svg",
+            "backgroundImageUrl": "https://images.unsplash.com/photo-1613677135043-a2512fbf49fa?q=80&w=3379&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "customCss": "",
+            "colors": {
+                "primary": "red",
+                "secondary": "violet",
+                "shade": 7
+            },
+            "appOpacity": 60,
+            "gridstack": {
+                "columnCountSmall": 3,
+                "columnCountMedium": 6,
+                "columnCountLarge": 10
+            },
+            "backgroundImageAttachment": "fixed",
+            "backgroundImageRepeat": "no-repeat",
+            "backgroundImageSize": "cover",
+            "metaTitle": "Buck50"
+        },
+        "access": {
+            "allowGuests": false
+        }
+    }
+}

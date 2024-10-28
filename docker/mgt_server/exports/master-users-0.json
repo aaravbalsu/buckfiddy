@@ -1,0 +1,29 @@
+{
+  "realm" : "master",
+  "users" : [ {
+    "id" : "5151e6ce-dc1f-44a1-92e4-bec83b911915",
+    "username" : "sarbanes.oxballs@gmail.com",
+    "firstName" : "Sarbanes",
+    "lastName" : "Oxballs",
+    "email" : "sarbanes.oxballs@gmail.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1720332982510,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "285d82da-4a6f-4c75-816e-e15075446570",
+      "type" : "password",
+      "createdDate" : 1720332982749,
+      "secretData" : "{\"value\":\"rtQhZqKVD9akGBO9NfXRlIfADc6GV20C5oE5uuhyEkw=\",\"salt\":\"O6e/JQA8EytfZy0MxllnzA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-master", "admin" ],
+    "clientRoles" : {
+      "buckfiddy-realm" : [ "manage-events", "manage-identity-providers", "query-realms", "manage-users", "view-identity-providers", "manage-authorization", "create-client", "manage-realm", "view-events", "view-realm", "manage-clients", "query-groups", "view-authorization", "query-users", "view-clients", "query-clients", "view-users" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

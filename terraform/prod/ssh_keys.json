@@ -1,0 +1,10 @@
+{
+    // Admin user name & pub key - e.g. "soxballs"
+    "admin_user_1" : "soxballs"
+    "ssh_public_key_admin" : "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDZYf3LETboy0X+c9uEpZJ71OYH9GJZa/nDxlrOw2Pbs6TxyAOuluK6beqNZjqX0ytv/4h/Z1kAmkqT/Fq7AsbAA5w2AFimIIO/59WV9YRJdoDVxsy9y3ZiXOUA3GoLO41MNzzbSBjghsf4QwwQOEPCjIfrLWou0MqpYqS1MYDD6MTqgLvm/+jhanFVz5Hek7u45yso3+7RZnAgiytQX6n/vCXHqcGbc1yFQjAuZmkj3+tqJ5VL02E5BVu4rTZfpyDfY+sPq0ycLLmf7a8MptIzTMUPyk6PD0AN8ermsCtXyWeC3wA8G9HSQtl/wBiYPMUS7R3F+XA5bd+A17HQS+t0aUajjlmLV/uTgos51kucT+eIKaVhi68IThMU0942/TEGSmAan12fo+Q9sQikY548aLYgmS735TcJ66tt3F4isVh+02kDwhkWRdhYwO49UaUXhj9uCBpXcUfScd8J4yrlA0itWooC+FmyoKLSjVJqaEah6X++vOvK6MrIJ/kl3TGYXXqmMVsIMfxyYBmctsB8EfhDfb8UtS3E5AUd/oowVxk3S/uVtb4vVpmMaxLSR+wNsPB8s+nXoqoePuPTw2/2pqIfHWgUgUfNXB5P9If/pcwmXjOuqADt3oUmU0c00lo4/JuY3YOiwibhWEU+fvurDqstPisctJERudhp/efpmw== soxballs"
+    // Operator user name & pub key(s) - e.g. "ping00"
+    "op_user_1" : "ping00"
+    "ssh_public_key_op1" : "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/tMY25/kV/GpPNln+GoFG5UmWC8GSizkwyjJKTtlIqDxcrsTi+v0UfZ3YDEdRiIXtjT8hcr9yQkC9yRxNdd/e0uDgLOjgC+Lbr1NhLNYUo3lP5E+q5B7TDzo2YlUhZwjQt2BD1SBkPfdz8+GmynKJJXCDHKN627/WbNthfUktnpbHbcKc5hFX477trnpZZ5KY2rJ7J8RSYxdZpkbOmh7bzM1Nddxo9kHP5Q2dZpEI47Mmd3PWnNQ0zJlD2rT1AuuXHlGFkYHBrGlpaW4ZR6ZrQuxWZ6n4l8CvBasY8pLd41eiBdYpBPTzW54jfIYX9TPo0z0lZgK1WXu3iGuGdR+AtH/hcYvDhJEcdRb5drMdcuD+ZgT/8XrLjFK/kSfFupTRMQqWUGQ2TBNRgTxZBdUzlSJ28Etwr2kIzJGjV0LM0GYZGqylCQzJbNYSSzNk+UmjZY0szTVLiOlJfGKiNSty5RSNN3JtWOOTqil45lBrHPI4A89rclYioKJZu9ZcEf6GHe/zPu1ULhgvXMW3Wou+i7upcMYvp5QyJDNRDjOhvABIXofu8Btb3NE5I4nbAR3l6p27ph1KrAp558yBBilEZ+SwUVbAaWHA1HYlpKdIVgiLlg/MVmsBe5Kjx3riSJ1GjTko9VM5d1D2TxnMEWwDnHW+Zwk0ZrRpFxHD+H5jiQ== ping00"
+    //op_user_2" : "xyz"
+    //"ssh_public_key_op2" : "ssh-rsa ... xyz"
+  }

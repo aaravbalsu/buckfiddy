@@ -1,0 +1,1259 @@
+{
+  "schemaVersion": 2,
+  "configProperties": {
+    "name": "Admin Board"
+  },
+  "categories": [
+    {
+      "id": "5eada611-bc88-4ddd-8ddf-a515eb55cb91",
+      "name": "Adminstration",
+      "position": 1,
+      "type": "category"
+    },
+    {
+      "id": "51edd2b5-3e1e-467e-b301-5042fd119363",
+      "name": "4774CK",
+      "position": 2
+    }
+  ],
+  "wrappers": [
+    {
+      "id": "default",
+      "position": 0
+    },
+    {
+      "id": "ce1b9d02-5d86-4ea4-87e8-9c1a32d90ab4",
+      "position": 1
+    },
+    {
+      "id": "6206e257-97b6-4842-8ad8-49a695d06153",
+      "position": 2
+    }
+  ],
+  "apps": [
+    {
+      "id": "95284697-d293-48f2-a54e-645e6ad2173d",
+      "name": "Ghostwriter",
+      "url": "https://report.buckfiddy",
+      "appearance": {
+        "iconUrl": "https://github.com/GhostManager/Ghostwriter/raw/master/DOCS/images/logo.png",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 18
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://report.buckfiddy",
+        "tooltipDescription": "Manage clients, projects, reports, and infrastructure."
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 4,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 3,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 1,
+            "y": 1
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "6ffa4378-307a-421a-a84c-49d564959f2a",
+      "name": "Gitea",
+      "url": "http://git.buckfiddy",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/gitea.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://git.buckfiddy"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 2,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "895954da-d327-4a77-88ef-eb54511c79c6",
+      "name": "Buck50 Wiki",
+      "url": "http://git.buckfiddy/BuckFiddy/t3am_BuckFiddy.wiki.git",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus_icons/src/apps_wikipedia.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://git.buckfiddy/BuckFiddy/t3am_BuckFiddy.wiki.git"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "d205fe1a-f42a-4f7e-a013-cfbd8315f7e9",
+      "name": "SSO Profile",
+      "url": "https://buckfiddy.westus2.cloudapp.azure.com/auth/realms/buck50/account",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus_icons/src/google_auth.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": false,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://buckfiddy.westus2.cloudapp.azure.com/auth/realms/buck50/account/"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "5eada611-bc88-4ddd-8ddf-a515eb55cb91"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 4,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 1,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "2a08105f-7178-402a-ba79-ed111ca2e79a",
+      "name": "Keycloak",
+      "url": "http://l33t.buckfiddy/auth/admin/master/console",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/keycloak.png",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": false,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://l33t.buckfiddy/auth/admin/master/console/"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "5eada611-bc88-4ddd-8ddf-a515eb55cb91"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 6,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 3,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 1,
+            "y": 3
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "367ff89d-15b2-4be7-a3ae-f417cc00c86c",
+      "name": "Privatebin",
+      "url": "http://paste.buckfiddy",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/privatebin.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://paste.buckfiddy"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 2,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 8,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "9fdfe0fd-6532-48f5-b3ca-f55e7fe71eb9",
+      "name": "Headscale",
+      "url": "https://tails.buckfiddy",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/tailscale-light.png",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://tails.buckfiddy"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "5eada611-bc88-4ddd-8ddf-a515eb55cb91"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 1
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "df840b91-a5fa-412d-bea7-a78fd63a211d",
+      "name": "Slack",
+      "url": "https://slack.com/app_redirect?team=T5SE9743B&channel=C5SE97BJ5",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/slack.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://slack.com/app_redirect?team=T5SE9743B&channel=C5SE97BJ5"
+      },
+      "area": {
+        "type": "sidebar",
+        "properties": {
+          "location": "right"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 1,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 1,
+            "y": 3
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "a1bd7c28-3be5-48ff-be82-0446902fc263",
+      "name": "Portainer",
+      "url": "https://deploy.buckfiddy",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/portainer.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://deploy.buckfiddy"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 6,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 4,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "831a5a10-1e3d-436c-a41e-eb7cbd00b53a",
+      "name": "Nginx NPM",
+      "url": "http://proxy.buckfiddy",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/nginx-proxy-manager.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://proxy.buckfiddy"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "5eada611-bc88-4ddd-8ddf-a515eb55cb91"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 2,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 2,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 3
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "e3165293-0582-4295-8f31-888f41c5652a",
+      "name": "Kali-b50_01",
+      "url": "https://homarr.dev",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/loganmarchione/homelab-svg-assets/assets/kalilinux.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://homarr.dev"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "51edd2b5-3e1e-467e-b301-5042fd119363"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "47af36c0-47c1-4e5b-bfc7-ad645ee6a337",
+      "name": "Discord",
+      "url": "https://discord.com/invite/aCsmEV5RgA",
+      "behaviour": {
+        "onClickUrl": "https://discord.com/invite/aCsmEV5RgA",
+        "isOpeningNewTab": true,
+        "externalUrl": "https://discord.com/invite/aCsmEV5RgA",
+        "tooltipDescription": "Join our Discord server! We're waiting for your ideas and feedback. "
+      },
+      "network": {
+        "enabledStatusChecker": false,
+        "statusCodes": [
+          "200"
+        ]
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/discord.png",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      },
+      "area": {
+        "type": "sidebar",
+        "properties": {
+          "location": "right"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 3
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "id": "1b169b23-1f09-46a4-a7d4-be37c1d218e3",
+      "type": "bookmark",
+      "properties": {
+        "name": "Bookmarks",
+        "items": [
+          {
+            "id": "4b4dc303-1082-4107-ba7d-c32763671426",
+            "name": "HackTricks",
+            "href": "https://book.hacktricks.xyz",
+            "iconUrl": "https://book.hacktricks.xyz/~gitbook/image?url=https%3A%2F%2F2783428383-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fcollections%252FmuMguNrsRx2mNyNqEox4%252Ficon%252F1qCJ0VIDlWcvGSecYCDq%252Ffondo.png%3Falt%3Dmedia%26token%3D1e721267-450f-43f3-861b-6c4f93278e93&width=32&dpr=2&quality=100&sign=61472716&sv=1",
+            "openNewTab": true,
+            "hideHostname": false,
+            "hideIcon": false
+          },
+          {
+            "id": "ecaffa11-1030-4a70-962c-c10b4b69ec6f",
+            "name": "CyberChef",
+            "href": "https://gchq.github.io/CyberChef/",
+            "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/cyberchef.svg",
+            "openNewTab": true,
+            "hideHostname": false,
+            "hideIcon": false
+          },
+          {
+            "id": "e05b3abe-52c4-4dcc-8a47-3d588968bac2",
+            "name": "Bsides",
+            "href": "https://bsideslv.org/",
+            "iconUrl": "https://bsideslv.org/assets/images/BSidesLV_logo.png",
+            "openNewTab": true,
+            "hideHostname": false,
+            "hideIcon": false
+          },
+          {
+            "id": "3a0e9ceb-61fe-4bbe-a4f3-bc6a475203ab",
+            "name": "HackTheBox",
+            "href": "https://www.hackthebox.com/",
+            "iconUrl": "https://static-00.iconduck.com/assets.00/hack-the-box-icon-512x512-pokr8xc5.png",
+            "openNewTab": true,
+            "hideHostname": false,
+            "hideIcon": false
+          }
+        ],
+        "layout": "autoGrid"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "60e18347-35e3-473c-9dbe-62faed207a61"
+        }
+      },
+      "shape": {
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 6,
+            "height": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "e3004052-6b83-480e-b458-56e8ccdca5f0",
+      "type": "weather",
+      "properties": {
+        "displayInFahrenheit": true,
+        "location": {
+          "name": "Issaquah",
+          "latitude": 47.5301,
+          "longitude": -122.03262
+        },
+        "displayCityName": true,
+        "displayWeekly": false,
+        "forecastDays": 5
+      },
+      "area": {
+        "type": "sidebar",
+        "properties": {
+          "location": "right"
+        }
+      },
+      "shape": {
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 1
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        },
+        "sm": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 1
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "971aa859-8570-49a1-8d34-dd5c7b3638d1",
+      "type": "date",
+      "properties": {
+        "display24HourFormat": true,
+        "dateFormat": "hide",
+        "enableTimezone": false,
+        "timezoneLocation": {
+          "name": "Paris",
+          "latitude": 48.85341,
+          "longitude": 2.3488
+        },
+        "titleState": "city",
+        "timezone": "America/Los_Angeles",
+        "customTitle": "Issaquah, WA"
+      },
+      "area": {
+        "type": "sidebar",
+        "properties": {
+          "location": "right"
+        }
+      },
+      "shape": {
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "f252768d-9e69-491b-b6b4-8cad04fa30e8",
+      "type": "date",
+      "properties": {
+        "display24HourFormat": true,
+        "dateFormat": "hide",
+        "enableTimezone": true,
+        "timezoneLocation": {
+          "name": "Tokyo",
+          "latitude": 35.6895,
+          "longitude": 139.69171
+        },
+        "titleState": "city",
+        "timezone": "America/Chicago",
+        "customTitle": "Dallas, TX"
+      },
+      "area": {
+        "type": "sidebar",
+        "properties": {
+          "location": "right"
+        }
+      },
+      "shape": {
+        "sm": {
+          "location": {
+            "x": 2,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "md": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 2
+          },
+          "size": {
+            "width": 2,
+            "height": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "43bbbe64-8891-46a4-9644-d4cb7de94eb6",
+      "type": "bookmark",
+      "properties": {
+        "name": "Bookmarks",
+        "items": [
+          {
+            "id": "3d32da83-3eed-4d2f-a98f-7d14912573b7",
+            "name": "VPN Install",
+            "href": "https://buckfiddy.westus2.cloudapp.azure.com/C6DB18A3-B63D-409A-8624-19A677A8D14D/windows",
+            "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/windows-95.svg",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "08b558ee-72d2-4b50-aca3-c97f1f5ceb22",
+            "name": "VPN Install",
+            "href": "https://buckfiddy.westus2.cloudapp.azure.com/C6DB18A3-B63D-409A-8624-19A677A8D14D/apple",
+            "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/apple-alt.svg",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "3549adc2-a616-4de0-ab99-768972f577a5",
+            "name": "Exploit-DB",
+            "href": "https://www.exploit-db.com/",
+            "iconUrl": "https://www.exploit-db.com/images/edb-logo.png",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "349cbb78-febb-4f45-a55d-1d63cdee5c44",
+            "name": "Hacktricks",
+            "href": "https://book.hacktricks.xyz",
+            "iconUrl": "https://book.hacktricks.xyz/~gitbook/image?url=https%3A%2F%2F2783428383-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fcollections%252FmuMguNrsRx2mNyNqEox4%252Ficon%252F1qCJ0VIDlWcvGSecYCDq%252Ffondo.png%3Falt%3Dmedia%26token%3D1e721267-450f-43f3-861b-6c4f93278e93&width=32&dpr=2&quality=100&sign=61472716&sv=1",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "ad6999fc-3b85-4bb7-abcc-33dbdc19ae7a",
+            "name": "HackTheBox",
+            "href": "https://account.hackthebox.com/login",
+            "iconUrl": "https://silofy.gallerycdn.vsassets.io/extensions/silofy/hackthebox/0.2.9/1629722910669/Microsoft.VisualStudio.Services.Icons.Default",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "e7e71f12-48de-48bf-9edb-9df23308b431",
+            "name": "Kali Images",
+            "href": "https://www.kali.org/get-kali/#kali-platforms",
+            "iconUrl": "https://cdn.jsdelivr.net/gh/loganmarchione/homelab-svg-assets/assets/kalilinux.svg",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "a5b928c2-6056-4812-9062-bf1adae605ad",
+            "name": "Revshells",
+            "href": "https://www.revshells.com",
+            "iconUrl": "https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus_icons/src/games_skullgirls.svg",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "bac6435f-332b-4780-91c2-413c5583d417",
+            "name": "Hak5",
+            "href": "https://shop.hak5.org/products",
+            "iconUrl": "https://shop.hak5.org/cdn/shop/files/logo1_hak5_410x.png?v=1613786565",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          },
+          {
+            "id": "d598bf9c-9189-437d-9db2-3d5176ce2c07",
+            "name": "InfoSec Cons",
+            "href": "https://infocondb.org",
+            "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/keycloak.svg",
+            "openNewTab": true,
+            "hideHostname": true,
+            "hideIcon": false
+          }
+        ],
+        "layout": "vertical"
+      },
+      "area": {
+        "type": "sidebar",
+        "properties": {
+          "location": "left"
+        }
+      },
+      "shape": {
+        "sm": {
+          "location": {
+            "x": 0,
+            "y": 1
+          },
+          "size": {
+            "width": 2,
+            "height": 7
+          }
+        },
+        "md": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 7
+          }
+        },
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 2,
+            "height": 7
+          }
+        }
+      }
+    }
+  ],
+  "settings": {
+    "common": {
+      "searchEngine": {
+        "type": "google",
+        "properties": {}
+      }
+    },
+    "customization": {
+      "layout": {
+        "enabledLeftSidebar": true,
+        "enabledRightSidebar": true,
+        "enabledDocker": false,
+        "enabledPing": true,
+        "enabledSearchbar": true
+      },
+      "pageTitle": "Team Buckfiddy",
+      "logoImageUrl": "/icons/android-chrome-512x512.png",
+      "faviconUrl": "/icons/favicon-32x32.png",
+      "backgroundImageUrl": "/icons/welcome-bckgrnd.jpg",
+      "customCss": "",
+      "colors": {
+        "primary": "red",
+        "secondary": "violet",
+        "shade": 7
+      },
+      "appOpacity": 50,
+      "gridstack": {
+        "columnCountSmall": 3,
+        "columnCountMedium": 6,
+        "columnCountLarge": 10
+      },
+      "backgroundImageAttachment": "fixed",
+      "backgroundImageRepeat": "no-repeat",
+      "backgroundImageSize": "cover",
+      "metaTitle": "Buck50"
+    },
+    "access": {
+      "allowGuests": false
+    }
+  }
+}

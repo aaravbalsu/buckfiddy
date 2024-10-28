@@ -1,0 +1,68 @@
+{
+  "realm" : "buck50",
+  "users" : [ {
+    "id" : "0c533826-842f-4be1-b553-1fee51a52c10",
+    "username" : "service-account-headscale",
+    "emailVerified" : false,
+    "createdTimestamp" : 1720407071735,
+    "enabled" : true,
+    "totp" : false,
+    "serviceAccountClientId" : "headscale",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-buck50" ],
+    "clientRoles" : {
+      "headscale" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "8d8c90d3-9cd6-46a3-840b-f71f747c3481",
+    "username" : "service-account-headscale-webui",
+    "emailVerified" : false,
+    "createdTimestamp" : 1720415706016,
+    "enabled" : true,
+    "totp" : false,
+    "serviceAccountClientId" : "headscale-webui",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-buck50" ],
+    "clientRoles" : {
+      "headscale-webui" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "f0bd09d3-1b6c-4975-a195-d3600046e734",
+    "username" : "soxballs",
+    "firstName" : "Sarbanes",
+    "lastName" : "Oxballs",
+    "email" : "sarbanesoxballs@gmail.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1720406858313,
+    "enabled" : true,
+    "totp" : true,
+    "credentials" : [ {
+      "id" : "16c61708-88ef-439e-a7db-e8897f774057",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1720410162436,
+      "secretData" : "{\"value\":\"rV91iYG/xBWZLDNVgHYXM9xnhA6OQ++HISLuHfWMGbI=\",\"salt\":\"OITqdePCNvv7ze+rzncv7Q==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    }, {
+      "id" : "62c1fe39-e5d9-4e31-b627-173525d50abc",
+      "type" : "otp",
+      "userLabel" : "Pixel 8",
+      "createdDate" : 1720411132321,
+      "secretData" : "{\"value\":\"8bbBkOItKoJpdtAJV8wC\"}",
+      "credentialData" : "{\"subType\":\"totp\",\"digits\":6,\"counter\":0,\"period\":30,\"algorithm\":\"HmacSHA1\"}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-buck50" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

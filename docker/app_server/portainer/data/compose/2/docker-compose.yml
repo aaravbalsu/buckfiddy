@@ -1,0 +1,52 @@
+services:
+  #
+  # PostgresSQL database used by Guacamole
+  # If not already done, create the initdb.sql file in the folder you will 
+  # map to </container_dir/initdb.sql>:/docker-entrypoint-initdb.d/initdb.sql
+  # IMPORTANT: Make sure you run the below command and move to guacamole folder;
+  # otherwise a directory will be created named 'initdb.sql'...
+  # `docker run --rm guacamole/guacamole:1.4.0 /opt/guacamole/bin/initdb.sh --postgres > initdb.sql`
+  #
+  guacamole-db:
+    container_name: guacamole-db
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: guacamole_user
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+    volumes:
+      - /home/soxballs/c2_ops_c0ntainers/guacamole/data:/var/lib/postgresql/data
+      - /home/soxballs/c2_ops_c0ntainers/guacamole/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+    # Comment this out after the first run or your DB may keep resetting...
+    #command: ["sh", "-c", "psql -U $POSTGRES_USER -d $POSTGRES_DB -f /docker-entrypoint-initdb.d/initdb.sql || exit 0"]
+  #
+  # Guacd service to... idk, make this all more complicated
+  #
+  guacd:
+    container_name: guacd
+    image: guacamole/guacd:1.4.0
+    restart: always
+  #
+  # Guacamole container that listens for connections on :8080
+  #
+  guacamole:
+    container_name: guacamole
+    image: guacamole/guacamole:1.4.0
+    restart: unless-stopped
+    depends_on:
+      - guacamole-db
+      - guacd
+    environment:
+      REMOTE_IP_VALVE: true # Set 'true' when behind a proxy
+      GUACD_HOSTNAME: guacd
+      POSTGRES_HOSTNAME: guacamole-db
+      POSTGRES_DATABASE: ${PG_DB}
+      POSTGRES_USER: guacamole_user
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      # Two Factor Auth
+      #TOTP_ENABLED: true
+      # The human-readable name of the entity issuing user accounts. 
+      #TOTP_ISSUER: "BuckFiddy Guacamole"
+    ports:
+      - "8080:8080"

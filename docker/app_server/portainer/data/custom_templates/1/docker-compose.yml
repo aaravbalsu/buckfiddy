@@ -1,0 +1,10 @@
+---
+services:
+  #
+  # Havoc Teamserver for 4tt4ck services
+  #
+  havoc_teamserver:
+    build:
+      context: .
+      dockerfile: ${PWD}/Dockerfile
+

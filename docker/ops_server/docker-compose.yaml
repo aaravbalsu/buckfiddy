@@ -1,0 +1,75 @@
+#
+# Docker networks for containers to access internal ports.
+#
+networks:
+  # Default docker network for App services. Set up as
+  # an external network so need to run:
+  # ~>  docker network create ops-net
+  ops-net:
+    external: true
+#
+# Containers
+#
+services:
+  #
+  # MSF Multi Handler (8443, 4444, 6444, 8444)
+  #
+  msf-handler:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ${PWD}/dockerfiles/Msf_Handler.Dockerfile
+    container_name: msf-handler
+    ports:
+      - "8443:443"
+      - "4444:4444"
+      - "6444:6444"
+      - "8444:8444"
+    volumes:
+      - ./msf-handler/handler.rc:/opt/msf_rc/handler.rc
+      - ./msf-handler/logs/console.log:/usr/share/metasploit-framework/logs/console.log:ro
+      - ./msf-handler/data:/var/lib/postgresql
+    command: "msfconsole"
+    tty: true
+    stdin_open: true
+    networks:
+      - ops-net
+  #
+  # Havoc Teamserver
+  #
+#  havoc-teamserver:
+#    restart: always
+#    build:
+#      context: .
+#      dockerfile: ${PWD}/dockerfiles/Havoc-Server.Dockerfile
+#    container_name: havoc-teamserver
+#    ports:
+#      - "40056:40056"
+#      - "443:443"
+#    volumes:
+#      - ./havoc-teamserver:/go/Havoc
+#    tty: true
+#    stdin_open: true
+#    networks:
+#      - ops-net
+  #
+  # Havoc Teamserver
+  #
+  sliver-server:
+    restart: always
+    build:
+      context: .
+      dockerfile: ${PWD}/dockerfiles/Sliver-Server_b50.Dockerfile
+    container_name: sliver-server
+    privileged: true
+    environment:
+      - HOST=ops.b50 
+      - OPRTR_FILE="${PWD}/sliver-server/operator.list"
+    volumes:
+      - ${PWD}/sliver-server/sliver:/home/sliver
+    tty: true
+    stdin_open: true
+    ports:
+      - "31337:31337"
+    networks:
+      - ops-net
